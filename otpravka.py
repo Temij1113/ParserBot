@@ -10,7 +10,7 @@ import time
 from poluchenie import file_maker
 
 #Без обновления не работает
-URL = "https://api.telegram.org/bot" + token + "/"
+URL = "https://api.telegram.org/bot" + str(token) + "/"
 
 proxies = {
     'https': 'socks5://3.212.104.192:3128'
@@ -24,7 +24,7 @@ def get_updates():
 spis_is_id=[]
 
 
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot(str(token))
 vr = time.strftime("%H:%M",time.localtime())
 
 
